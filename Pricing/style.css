@@ -5,13 +5,18 @@ body{
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 16px 24px;
     font-size: 20px;
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
     margin-bottom: -25px;
 }
+.nav_and_btn {
+    display: flex;
+    align-items: center;
+}
 .navigation {
-    padding-right: 10px;
+    margin-left: 600px;
     font-size: 16px;
 }
 .menu {
@@ -19,7 +24,8 @@ header {
     text-decoration: none;
     color: black;
 }
-.menu:last-child{
+.sign_up{
+    background-color: #fff;
     color: #007bff;
     border: 1px solid #007bff;
     padding: 10px 15px;
@@ -94,13 +100,9 @@ header {
     text-align: center;
     padding-left: 0;
 }
-.button_blue{
+.button_wrap {
     border: 1px solid #007bff;
     background-color: #007bff;
-    color: white;
-}
-button {
-    border: 1px solid #007bff;
     color: #007bff;
     padding: .5rem 1rem;
     font-size: 1.25rem;
