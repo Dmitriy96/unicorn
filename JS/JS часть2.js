@@ -84,3 +84,19 @@ getMaxSubSum([1, 2, 3]) = 6 (берём все)
 getMaxSubSum([-1, -2, -3]) = 0
 Попробуйте придумать быстрое решение: O(n2), а лучше за О(n) операций.
 */
+function getMaxSubSum(arr){
+    let max_sum=0;
+    for (let i=0; i<arr.length; i++){
+        let sum=0;
+        for (let n=i; n<arr.length; n++){
+            sum+=arr[n];
+            max_sum=Math.max(max_sum, sum);
+        }
+    }
+    return max_sum;
+}
+alert( getMaxSubSum([-1, 2, 3, -9]) );
+alert( getMaxSubSum([-1, 2, 3, -9, 11]) );
+alert( getMaxSubSum([-2, -1, 1, 2]) );
+alert( getMaxSubSum([1, 2, 3]) );
+alert( getMaxSubSum([100, -9, 2, -3, 5]) );
