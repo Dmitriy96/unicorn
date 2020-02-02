@@ -51,3 +51,27 @@ function oper(arr){
    Сделайте функцию each, которая первым параметром принимает массив, а вторым - массив функций, 
    которые по очереди применятся к каждому элементу массива: к первому элементу массива - первая функция, 
    ко второму - вторая и так далее пока функции в массиве не закончатся, после этого возьмется первая функция, вторая и так далее по кругу*/
+function kvadrat (num) {
+    num = num ** 2;
+    return num;
+}
+function kub (num1) {
+    num1 = num1 ** 3;
+    return num1;
+}
+let func = [kvadrat, kub];
+let arr = [2,3];
+
+function ggg (arr, func){
+  let j = 0; 
+	for (let i = 0; i < arr.length; i++) {
+		if (i >= func.length) {
+			j = i % func.length;
+			   
+		}
+		arr[i] = func[j](arr[i]);
+		j++;
+	}
+	return arr;
+}
+console.log (ggg(arr, func));
