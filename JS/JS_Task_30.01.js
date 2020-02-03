@@ -75,3 +75,56 @@ function ggg (arr, func){
 	return arr;
 }
 console.log (ggg(arr, func));
+
+/* Задача 5
+Сделайте функцию, каждый вызов который будет генерировать случайные числа от 1 до 100, но так, чтобы они не повторялись, 
+пока не будут перебраны все числа из этого промежутка. 
+Решите задачу через замыкания - в замыкании должен хранится массив чисел, которые уже были сгенерированы функцией.*/
+
+function funcRand(){
+  let arr = [];
+  let rand;
+  function randomNumber (min = 1, max = 100){
+    return Math.floor (Math.random() * (max - min )) + min;;
+  }
+    while (arr.length < 100){
+      rand = randomNumber();
+      if (arr.length == 0) {
+            arr.push(rand);
+          }
+  }
+    let flag = true;
+    for (let i = 0; i < arr.length; i++){
+      if (arr [i] == rand){
+        flag = false;
+        break;
+      } 
+  }
+    if (flag){
+      arr.push (rand);
+    }
+    return (arr);
+    }
+  console.log (funcRand().sort(function(a,b){return a-b;}));
+  
+
+  /*Задача 6
+
+  Сделайте функцию, которая считает и выводит количество своих вызовов.
+	func(); //выведет 1
+  func(); //выведет 2
+  func(); //выведет 3
+  func(); //выведет 4*/
+
+  function count () {
+    var counter  = 0;
+    return function (){
+      counter++;
+      return counter;
+    }
+  }
+  let func = count();
+  console.log(func());
+  console.log(func());
+  console.log(func());
+  
