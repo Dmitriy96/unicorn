@@ -25,8 +25,8 @@ function kub (num1) {
     num1 = num1 ** 3;
     return num1;
 }
-function ggg (number, callback) {
-    number = kvadrat(2) + kub(3);
+function ggg (number, square, cube) {
+    number = square + cube;
     return number;
 }
 
