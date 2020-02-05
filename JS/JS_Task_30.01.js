@@ -26,13 +26,8 @@ function kub (num1) {
   return num1;
 }
 function ggg (number, square, cube) {
-<<<<<<< HEAD
   number = square + cube;
   return number;
-=======
-    number = square + cube;
-    return number;
->>>>>>> 4dfecbe617382c8f64bebf3975de823df8f984f4
 }
 
 alert (ggg());
