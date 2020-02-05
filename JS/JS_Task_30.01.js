@@ -18,16 +18,16 @@ function makeCounter() {
 Эти функции есть как Function Declaration - kvadrat, kub. 
 Пусть функция ggg вернет сумму квадрата и куба числа.*/
 function kvadrat (num) {
-    num = num ** 2;
-    return num;
+  num = num ** 2;
+  return num;
 }
 function kub (num1) {
-    num1 = num1 ** 3;
-    return num1;
+  num1 = num1 ** 3;
+  return num1;
 }
-function ggg (number, callback) {
-    number = kvadrat(2) + kub(3);
-    return number;
+function ggg (number, square, cube) {
+  number = square + cube;
+  return number;
 }
 
 alert (ggg());
@@ -35,17 +35,16 @@ alert (ggg());
 /* Задача 3
 Сделайте функцию each, которая первым параметром принимает массив, а вторым - функцию, которая применится к каждому элементу массива. 
 Функция each должна вернуть измененный массив.*/
-function oper(arr){
-    let sum;
-    sum = arr.sort(function(a, b) { return a - b; });
-    return sum;
-   }
-   
-   function each (some_arr = [10, 3, 7, 5], callback){
-     oper (some_arr);
-     return some_arr;
-   }
-   console.log (each());
+function oper(){
+  let sum;
+  sum = arr.sort(function(a, b) { return a - b; });
+  return sum;
+ }
+ let arr = [10, 3, 7, 5]
+ function each (some_arr, func){
+   return some_arr;
+ }
+ console.log (each(arr,oper()));
 
    /* Задача 4
    Сделайте функцию each, которая первым параметром принимает массив, а вторым - массив функций, 
@@ -80,7 +79,7 @@ console.log (ggg(arr, func));
 Сделайте функцию, каждый вызов который будет генерировать случайные числа от 1 до 100, но так, чтобы они не повторялись, 
 пока не будут перебраны все числа из этого промежутка. 
 Решите задачу через замыкания - в замыкании должен хранится массив чисел, которые уже были сгенерированы функцией.*/
-
+// не проверять
 function funcRand(){
   let arr = [];
   let rand;
