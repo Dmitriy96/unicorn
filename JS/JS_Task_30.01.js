@@ -18,19 +18,19 @@ function makeCounter() {
 Эти функции есть как Function Declaration - kvadrat, kub. 
 Пусть функция ggg вернет сумму квадрата и куба числа.*/
 function kvadrat (num) {
-    num = num ** 2;
-    return num;
+  num = num ** 2;
+  return num;
 }
 function kub (num1) {
-    num1 = num1 ** 3;
-    return num1;
+  num1 = num1 ** 3;
+  return num1;
 }
 function ggg (number, square, cube) {
-    number = square + cube;
-    return number;
+  number = square + cube;
+  return number;
 }
 
-alert (ggg());
+console.log (ggg(0,kvadrat(3), kub(2)));
 
 /* Задача 3
 Сделайте функцию each, которая первым параметром принимает массив, а вторым - функцию, которая применится к каждому элементу массива. 
@@ -128,3 +128,7 @@ function funcRand(){
   console.log(func());
   console.log(func());
   
+
+  while (1){
+    alert (ku-ku);
+  }
