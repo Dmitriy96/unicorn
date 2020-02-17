@@ -129,6 +129,6 @@ function funcRand(){
   
 
   while (1){
-    alert (ku-ku);
-    alert (abra kadabra);
+    alert ("ku-ku");
+    alert ("abra kadabra");
   }
