@@ -1,3 +1,31 @@
+/*Задача
+
+Дана страница:
+<html>
+<body>
+  <div>Пользователи:</div>
+  <ul>
+    <li>Джон</li>
+    <li>Пит</li>
+  </ul>
+</body>
+</html>
+
+Как получить элементы :
+1. Напишите код, который получит элемент <div>?
+2. Напишите код, который получит <ul>?
+3. Напишите код, который получит второй <li> (с именем Пит)?*/
+1.document.body.children[0]; / document.body.firstElementChild / document.childNodes[1]
+2.document.body.children[1]; / document.body.lastElementChild
+3.document.body.lastElementChild.lastElementChild
+
+/*Задача
+
+Если elem – произвольный узел DOM-элемента…
+Правда, что elem.lastChild.nextSibling всегда равен null? да
+Правда, что elem.children[0].previousSibling всегда равен null ? нет
+*/
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -49,7 +77,12 @@
             </tr>
         </table>
         <script>
-           table.td.cellIndex[1].style.background = 'red'.innerHTML;
+           for (let i = 0; i < table.rows.length; i++){
+             let diagonal = table.rows[i].cells[i];
+             diagonal.style.background = 'red';
+           } 
+           
        </script>
     </body>
 </html>
+
