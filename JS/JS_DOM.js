@@ -78,8 +78,8 @@
         </table>
         <script>
            for (let i = 0; i < table.rows.length; i++){
-             let cells = table.rows[i].cells[i];
-             cells.style.background = 'red';
+             let diagonal = table.rows[i].cells[i];
+             diagonal.style.background = 'red';
            } 
            
        </script>
