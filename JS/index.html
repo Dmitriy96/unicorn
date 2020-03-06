@@ -4,52 +4,42 @@
         <meta charset="utf-8">
         <title>JavaScript</title>
         <style>
-            table, td {
-                border: 1px solid black;
-                border-spacing: 0;
-            }
         </style>
     </head>
     <body>
-        <table id = "table">
-            <tr>
-                <td>1:1</td>
-                <td>2:1</td>
-                <td>3:1</td>
-                <td>4:1</td>
-                <td>5:1</td>
-            </tr>
-            <tr>
-                <td>1:2</td>
-                <td>2:2</td>
-                <td>3:2</td>
-                <td>4:2</td>
-                <td>5:2</td>
-            </tr>
-            <tr>
-                <td>1:3</td>
-                <td>2:3</td>
-                <td>3:3</td>
-                <td>4:3</td>
-                <td>5:3</td>
-            </tr>
-            <tr>
-                <td>1:4</td>
-                <td>2:4</td>
-                <td>3:4</td>
-                <td>4:4</td>
-                <td>5:4</td>
-            </tr>
-            <tr>
-                <td>1:5</td>
-                <td>2:5</td>
-                <td>3:5</td>
-                <td>4:5</td>
-                <td>5:5</td>
-            </tr>
-        </table>
+      <ul id = "car">
+        <li><span>Список машин</span></li>
+        <ul>
+            <li><span>Audi</span></li>
+            <ul>
+                <li>Объём: 1.8</li>
+                <li>Привод: передний</li>
+                <li>Цвет: белый</li>
+            </ul>
+        </ul>
+        <ul>
+            <li><span>BMW</span></li>
+            <ul>
+                <li>Объём: 2.5</li>
+                <li>Привод: задний</li>
+                <li>Цвет: черный</li>
+            </ul>
+        </ul>
+        <ul>
+            <li><span>ВАЗ</span></li>
+            <ul>
+                <li>Объём: 1.6</li>
+                <li>Привод: передний</li>
+                <li>Цвет: синий</li>
+            </ul>
+        </ul>
+      </ul>
         <script>
-           table.td.cellIndex[1].style.background = 'red'.innerHTML;
+          car.onclick = function(){
+           for (var i = 0; i < car.childNodes.length; i++) {
+              car.childNodes[i].style.display = 'none';
+    }
+           }
        </script>
     </body>
 </html>

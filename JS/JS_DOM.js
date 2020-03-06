@@ -26,7 +26,7 @@
 Правда, что elem.children[0].previousSibling всегда равен null ? нет
 */
 
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
     <head>
         <meta charset="utf-8">
@@ -85,4 +85,59 @@
        </script>
     </body>
 </html>
+
+/*Задача
+Добавьте JavaScript к кнопке button, 
+чтобы при нажатии элемент <div id="text"> исчезал.
+*/
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+        <style>
+        </style>
+    </head>
+    <body>
+      <button id = 'btn'>Удалить div</button>
+      <div id = "text">Текст</div>
+        <script>
+           btn.onclick = function (){
+             text.style.display = 'none';  
+           }
+       </script>
+    </body>
+</html> 
+
+Задача
+Создайте кнопку, которая будет скрывать себя по нажатию.
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+        <style>
+        </style>
+    </head>
+    <body>
+      <button id = 'btn'>Скрыть</button>
+        <script>
+           btn.onclick = function (){
+             btn.style.display = 'none';  
+           }
+       </script>
+    </body>
+</html>
+
+Задача
+В переменной button находится кнопка. Изначально на ней нет обработчиков.
+Который из обработчиков запустится? 
+
+Что будет выведено при клике после выполнения кода? -> 1,2
+button.addEventListener("click", () => alert("1")); - выполниться
+button.removeEventListener("click", () => alert("1")); - не выполниться
+button.onclick = () => alert(2); - выполниться
+
+
 
